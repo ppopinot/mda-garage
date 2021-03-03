@@ -1,4 +1,4 @@
-package fr.miage.mda;
+package tech.becoming.mda.one;
 
 public class DigitalLock {
 	
