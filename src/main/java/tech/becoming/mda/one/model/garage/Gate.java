@@ -1,10 +1,6 @@
-package tech.becoming.mda.one;
+package tech.becoming.mda.one.model.garage;
 
-public class Gate extends Thread{
-	
-	public Gate() {
-		
-	}
+public class Gate {
 	
 	public void open() {
 		int i = 0;

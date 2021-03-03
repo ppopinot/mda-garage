@@ -1,16 +1,20 @@
-package tech.becoming.mda.one;
+package tech.becoming.mda.one.model.garage;
+
+import java.util.List;
 
 public class DigitalLock {
 	
 	private Motor motor;
+
+	private List<String> authorizedValues;
 	
 	public DigitalLock(Motor motor) {
-		super();
 		this.motor = motor;
+		authorizedValues = List.of("1111", "0000", "6969", "1234");
 	}
 
 	public boolean validateKey(DigitalKey key) {
-		return true;
+		return authorizedValues.contains(key.getValue());
 	}
 
 	public void open(DigitalKey digitalKey) {
