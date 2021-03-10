@@ -1,0 +1,22 @@
+@startuml
+
+Opening : The gate is opening
+Open : The gate is open
+Closing : The gate is closing
+Close : The gate is close
+
+[*] --> Close
+
+Open --> Closing : Automatic after 30 seconds
+
+Close --> Opening : Valid security code
+
+Close --> Close : Invalid security code
+
+Closing --> Opening : Valid security code
+
+Opening --> Open : Open
+
+Closing --> Close : Closing the gate
+
+@enduml
